@@ -1,0 +1,13 @@
+School:
+  - name: DPS
+    principal: Someone
+    Students:
+      - rno: 21
+        name: Kunal Kushwaha
+        marks: 93
+  - name: Geeta Sr. Sec. School no. 2
+    principal: Chota Ravaana
+    Student:
+      - rno: 07
+        name: Hemant
+        marks: 98

@@ -1,0 +1,18 @@
+"apple": "I am a red fruit"
+1: "this is kunal's roll number"
+--- # "---" telling that all three are diff objects
+# lists 
+- apple
+- mango
+- banana
+- Apple # yaml is case-sensitive
+--- 
+cities:
+ - new delhi
+ - mumbai
+ - gujrat
+---
+cities: [new delhi, mumbai]
+---
+{mango: "yello fruit", age: 48}
+... # showing that document ends here

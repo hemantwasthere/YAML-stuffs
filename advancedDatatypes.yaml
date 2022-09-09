@@ -1,0 +1,92 @@
+student: !!seq
+ - marks
+ - name 
+ - roll_no
+
+ # like this also
+student2: [marks, name, roll_no]
+
+
+# some of the keys of seq will empty this is known as the sparse seq
+# sparse seq
+sparse seq: 
+ - hey
+ - 
+ - Null
+ - sup
+
+# nested seq
+# -
+#  - mango
+#  - banana
+#  - apple
+# -
+#  - kunal
+#  - mark
+#  - apoorv
+# -
+#  - Docker
+#  - Kubernetes
+#  - Datree
+
+# key value pairs are called maps
+# !!map
+
+# nested mapping: map within a map
+name: kunal kushwaha
+role: 
+ age: 21
+ job: student
+
+# same as
+name2: Kunal Kushwaha 
+role2: { age: 21, job: student}
+
+
+# keys may have duplicate values
+# !!pairs
+
+pair example: !!pairs
+ - job: student
+ - job: teacher
+
+# same as
+pair example 2: !!pairs [job: student, job: teacher]
+# this will be an array of hashtables
+
+# !!set will allow you to have unique values
+names: !!set 
+ ? Kunal
+ ? Apoorv
+ ? Rahul
+
+# dictionary !!omap
+People: !!omap 
+ - Kunal: 
+    name: Kunal Kushwaha
+    age: 32
+    height: 233
+ - Rahul: 
+    name: Rahul OP
+    age: 23
+    height: 238
+
+# reusing some properties using anchors
+likings: &likes
+  fav fruit: mango
+  dislikes: grapes
+
+person1: 
+   name: Kunal Kushwaha
+   <<: *likes
+   dislikes: guava # we can also overwrite the property
+
+person2: 
+   name: Rahul OP
+   <<: *likes
+
+person3: 
+   name: Apoorv Goyal
+   <<: *likes
+   fav fruit: Kiwi
+

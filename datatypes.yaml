@@ -1,0 +1,49 @@
+
+# String variables
+myself: Kunal Kushwaha
+fruit: "Apple" 
+job: 'swe'
+bio: | 
+hey my name is kunal kushwaha.
+i am a very nice dude.
+
+# write a single line in multiple lines
+message1: > 
+this will all 
+be in a one single
+line huehue
+
+# same as 
+message2: this will all be in a one single line huehue
+
+number: 3232 # int 
+marks: 98.48 # float
+booleanValue1: No # no, No, false, False, FALSE boolean
+booleanValue2: Yes # yes, Yes, true, True, TRUE boolean
+
+# specify the type forcefully
+zero: !!int 0
+positiveNum: !!int 34
+negativeNum: !!int -34
+binaryNum: !!binary 0b11001
+octalNum: !!int 0283984
+hexa: !!int 0x45
+commaValue: !!int +540_000 # 540,000 
+exponential numbers: 6.023E56
+
+# floating point numbers
+marks2: !!float 89.32
+infinite: !!float .inf
+not a num: .nan
+booleanNum: !!bool True
+stringNum: !!str "This is string"
+
+# null
+surname: !!null Null # or null, NULL, ~
+~: this is a null key
+
+
+#dates and time
+date: !!timestamp 2002-12-14
+india time: 2001-12-15T02:59:43:10 +5:30
+no time zone: 2001-12-15T02:59:43:10
